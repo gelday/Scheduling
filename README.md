@@ -43,8 +43,3 @@ GET http://localhost/SubjectAPI/api.php?time=7:30
   "teacher": "Mr. Jade Louis Cabucos",
   "time": "07:30 - 09:00"
 }
-
-🌐 Repository
-
-GitHub Repository
-
