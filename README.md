@@ -48,5 +48,3 @@ GET http://localhost/SubjectAPI/api.php?time=7:30
 
 GitHub Repository
 
-
-Do you want me to also add a **section on how to extend the API** (e.g., adding more subjects, connecting to MySQL, 
