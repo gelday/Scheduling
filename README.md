@@ -39,3 +39,38 @@ C:/xampp/htdocs/SIA/schedule_api.php
   "teacher": "Mr. Jade Louis Cabucos",
   "time": "07:30 - 09:00"
 }
+
+
+🔹 Request
+      POST http://localhost/SIA/schedule_api.php?time=07:30
+
+   🔹 Body
+
+   {
+    "time": "7:30",
+    "end": "9:30",
+    "subject": "IT EVD 31",
+    "teacher": "Mr.Cabucos"
+}
+
+🔹 Response (JSON)
+{
+    "time": "7:30",
+    "end": "9:30",
+    "subject": "IT EVD 31",
+    "teacher": "Mr.Cabucos"
+}
+
+🔹 Request
+      DELETE http://localhost/SIA/schedule_api.php?time=07:30
+
+ 🔹 Body
+    {
+  "time": "07:30"
+}
+
+
+🔹 Response (JSON)
+{
+    "message": "Schedule deleted for time 07:30"
+}
