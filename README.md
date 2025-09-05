@@ -1,13 +1,9 @@
-# 📘 Subject Scheduling API
+#Schedule API Documentation
 
-This is a custom **PHP-based Web API** designed for scheduling purposes.  
-By providing a specific **time query**, the API responds with the **scheduled subject, assigned teacher, and time slot**.
-
----
+This API allows you to manage a schedule stored in a JSON file (schedule.json). The schedule consists of time slots, each having a subject and a corresponding teacher.
 
 ## ✨ Features
--Time-based Schedule Lookup
--Returns Complete Schedule Information
+The Schedule API allows you to view the schedule or a specific time slot using the GET method, add a new schedule entry with a subject and teacher using the POST method, and remove a schedule entry by its time using the DELETE method.
 
 ---
 
