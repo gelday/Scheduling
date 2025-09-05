@@ -27,11 +27,11 @@ C:/xampp/htdocs/SIA/schedule_api.php
 
 4. Access the API via Browser or Postman.
    Example:
-   http://localhost/SIA/schedule_api.php
+   http://localhost/SIA/schedule_api.php?time=7:30
 
 📌 Example Request and Response
    🔹 Request
-      GET http://localhost/SIA/schedule_api.php
+      GET http://localhost/SIA/schedule_api.php?time=7:30
 
 🔹 Response (JSON)
 {
