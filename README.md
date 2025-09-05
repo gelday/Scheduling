@@ -17,21 +17,21 @@ The Schedule API allows you to view the schedule or a specific time slot using t
 ### 📥 Steps
 1. **Clone or Download the Repository**
    ```bash
-   git clone https://github.com/your-username/SubjectAPI.git
+   git clone https://github.com/your-username/SIA.git
 2. Place it in Your Local Server Directory
 Example for XAMPP:
-C:/xampp/htdocs/SubjectAPI/
+C:/xampp/htdocs/SIA/schedule_api.php
 
 
 3. Start Apache in XAMPP Control Panel.
 
 4. Access the API via Browser or Postman.
    Example:
-   http://localhost/SubjectAPI/api.php?time=7:30
+   http://localhost/SIA/schedule_api.php
 
 📌 Example Request and Response
    🔹 Request
-      GET http://localhost/SubjectAPI/api.php?time=7:30
+      GET http://localhost/SIA/schedule_api.php
 
 🔹 Response (JSON)
 {
