@@ -30,12 +30,12 @@ C:/xampp/htdocs/SubjectAPI/
 3. Start Apache in XAMPP Control Panel.
 
 4. Access the API via Browser or Postman.
-Example:
-http://localhost/SubjectAPI/api.php?time=7:30
+   Example:
+   http://localhost/SubjectAPI/api.php?time=7:30
 
 📌 Example Request and Response
-🔹 Request
-GET http://localhost/SubjectAPI/api.php?time=7:30
+   🔹 Request
+      GET http://localhost/SubjectAPI/api.php?time=7:30
 
 🔹 Response (JSON)
 {
