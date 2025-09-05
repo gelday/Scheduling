@@ -18,14 +18,14 @@ function loadSchedule() {
     if (!file_exists(SCHEDULE_FILE)) {
         // Default schedule array
         $default = [
-            ["time" => "07:30", "end" => "09:00 am", "subject" => "EVD", "teacher" => "Mr. Jade Louis Cabucos"],
-            ["time" => "09:00", "end" => "10:30 am", "subject" => "IAS", "teacher" => "Mr. Jade Louis Cabucos"],
-            ["time" => "10:30", "end" => "12:00 pm", "subject" => "SIA", "teacher" => "Mr. Yestin Roy Prado"],
-            ["time" => "12:01", "end" => "14:59 pm", "subject" => "Vacant Time", "teacher" => ""],
-            ["time" => "15:00", "end" => "16:30 pm", "subject" => "NET", "teacher" => "Ms. Gladymay Sadorra"],
-            ["time" => "16:30", "end" => "18:00 pm", "subject" => "SPI", "teacher" => "Mr. Yestin Roy Prado"],
-            ["time" => "18:00", "end" => "19:30 pm", "subject" => "ELEC", "teacher" => "Ms. En Catarungan"],
-            ["time" => "19:30", "end" => "21:00 pm", "subject" => "FREE ELEC 1", "teacher" => "Mr. Jade Louis Cabucos"],
+            ["time" => "07:30", "end" => "09:00", "subject" => "IT EVD 31", "teacher" => "Mr. Jade Louis S. Cabucos"],
+            ["time" => "09:01", "end" => "10:30", "subject" => "IT IAS 31", "teacher" => "Mr. Jade Louis S. Cabucos"],
+            ["time" => "10:31", "end" => "12:00", "subject" => "ITSIA 31", "teacher" => "Mr. Yestin Roy A. Prado"],
+            ["time" => "12:01", "end" => "14:59", "subject" => "VACANT TIME", "teacher" => "NONE"],
+            ["time" => "15:00", "end" => "16:30", "subject" => "IT NET 31", "teacher" => "Ms. Gladymay S. Sadorra"],
+            ["time" => "16:31", "end" => "18:00", "subject" => "IT SPI 31", "teacher" => "Mr. Yestin Roy A. Prado"],
+            ["time" => "18:01", "end" => "19:30", "subject" => "IT ELEC 1", "teacher" => "Ms. En Catarungan"],
+            ["time" => "19:31", "end" => "21:00", "subject" => "FREE ELEC 1", "teacher" => "Mr. Jade Louis S. Cabucos"],
         ];
         file_put_contents(SCHEDULE_FILE, json_encode($default, JSON_PRETTY_PRINT));
         return $default;
