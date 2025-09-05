@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 include 'schedule.php';
 
 if (!isset($_GET['time'])) {
-    echo json_encode(['error' => 'Please provide a time in HH:MM format (24-hour)']);
+    echo json_encode(['error' => 'Please provide a time in HH:MM format (12-hour)']);
     exit;
 }
 
@@ -28,5 +28,5 @@ foreach ($schedule as $entry) {
 }
 
 if (!$found) {
-    echo json_encode(['subject' => 'No class at this time']);
+    echo json_encode(['subject' => 'NO CLASS AT THE MOMENT']);
 }
