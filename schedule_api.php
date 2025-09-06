@@ -61,18 +61,35 @@ foreach ($schedule as $entry) {
 $method = $_SERVER['REQUEST_METHOD'];
 
 if ($method === 'GET') {
-    // If 'time' param provided, return specific entry
     if (isset($_GET['time'])) {
-        $time = $_GET['time'];
-        if (isset($scheduleMap[$time])) {
-            respond($scheduleMap[$time]);
-        } else {
-            respond(["error" => "Schedule not found for time $time"], 404);
+        // Handle request for specific time
+        $inputTime = $_GET['time'];
+        $inputTimestamp = strtotime($inputTime);
+        $found = false;
+
+        foreach ($schedule as $entry) {
+            $start = strtotime($entry['time']);
+            $end = strtotime($entry['end']);
+
+            if ($inputTimestamp >= $start && $inputTimestamp <= $end) {
+                echo json_encode([
+                    'subject' => $entry['subject'],
+                    'teacher' => $entry['teacher'],
+                    'time' => $entry['time'] . " - " . $entry['end']
+                ]);
+                $found = true;
+                break;
+            }
+        }
+
+        if (!$found) {
+            echo json_encode(['subject' => 'No class at the moment']);
         }
     } else {
-        // Return all entries
-        respond(array_values($scheduleMap));
+        // If no 'time' query parameter is provided, return the full schedule
+        echo json_encode($schedule);
     }
+    exit;
 }
 
 if ($method === 'POST') {
