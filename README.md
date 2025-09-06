@@ -42,35 +42,35 @@ C:/xampp/htdocs/SIA/schedule_api.php
 
 
 🔹 Request
-      POST http://localhost/SIA/schedule_api.php?time=07:30
+      POST http://localhost/SIA/schedule_api.php?time=22:30
 
    🔹 Body
 
    {
-    "time": "7:30",
-    "end": "9:30",
+    "time": "22:30",
+    "end": "23:30",
     "subject": "IT EVD 31",
     "teacher": "Mr.Cabucos"
 }
 
 🔹 Response (JSON)
 {
-    "time": "7:30",
-    "end": "9:30",
+    "time": "22:30",
+    "end": "23:30",
     "subject": "IT EVD 31",
     "teacher": "Mr.Cabucos"
 }
 
 🔹 Request
-      DELETE http://localhost/SIA/schedule_api.php?time=07:30
+      DELETE http://localhost/SIA/schedule_api.php?time=22:30
 
  🔹 Body
     {
-  "time": "07:30"
+  "time": "22:30"
 }
 
 
 🔹 Response (JSON)
 {
-    "message": "Schedule deleted for time 07:30"
+    "message": "Schedule deleted for time 22:30"
 }
