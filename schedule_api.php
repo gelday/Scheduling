@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit(0);
 }
 
-// Load schedule from JSON file or create default if missing
+// Load schedule from JSON file
 function loadSchedule() {
     if (!file_exists(SCHEDULE_FILE)) {
         // Default schedule array
