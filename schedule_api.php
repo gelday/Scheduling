@@ -99,14 +99,25 @@ if ($method === 'POST') {
     }
 
     $time = $input['time'];
-    if (isset($scheduleMap[$time])) {
-        respond(["error" => "Schedule already exists for time $time"], 409);
+    $end = $input['end'];
+    $inputTimestampStart = strtotime($time);
+    $inputTimestampEnd = strtotime($end);
+
+    // Check if the time range overlaps with any existing schedule
+    foreach ($schedule as $entry) {
+        $entryTimestampStart = strtotime($entry['time']);
+        $entryTimestampEnd = strtotime($entry['end']);
+
+        // If there is any overlap, return an error
+        if (($inputTimestampStart < $entryTimestampEnd) && ($inputTimestampEnd > $entryTimestampStart)) {
+            respond(["error" => "Schedule already exists for this time range"], 409);
+        }
     }
 
-    // Add new entry
+    // If no overlap, proceed to add the new entry
     $newEntry = [
-        "time" => $input['time'],
-        "end" => $input['end'],
+        "time" => $time,
+        "end" => $end,
         "subject" => $input['subject'],
         "teacher" => $input['teacher']
     ];
@@ -116,7 +127,6 @@ if ($method === 'POST') {
 
     respond($newEntry, 201);
 }
-
 if ($method === 'DELETE') {
     if (!isset($_GET['time'])) {
         respond(["error" => "Missing 'time' parameter for deletion"], 400);
